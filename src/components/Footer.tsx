@@ -9,7 +9,7 @@ const Footer = () => (
       </div>
       <div className="flex items-center gap-4">
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/brunomothion/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-full border border-primary-foreground/20 hover:bg-primary-foreground/10 transition-colors"

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
-import profileImg from "@/assets/profile-placeholder.jpg";
+import profileImg from "@/assets/profile-bruno.png";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
