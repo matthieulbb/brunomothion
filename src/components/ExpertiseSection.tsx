@@ -44,7 +44,7 @@ const ExpertiseSection = () => (
         transition={{ duration: 0.6 }}
         className="mb-14"
       >
-        <h2 className="section-title text-foreground">Expertise Consulting</h2>
+        <h2 className="section-title text-foreground">Consulting</h2>
         <div className="w-12 h-0.5 bg-primary mb-4" />
         <p className="section-subtitle">
           Des interventions sur mesure pour répondre aux défis de votre organisation.
