@@ -32,7 +32,7 @@ const HeroSection = () => {
               className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:bg-blue-grey-dark transition-colors"
             >
               <Briefcase size={18} />
-              Expertise Consulting
+              Consulting
             </button>
             <button
               onClick={() => scrollTo("#schools")}
@@ -51,11 +51,11 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
             <img
               src={profileImg}
               alt="Bruno Mothion"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
           </div>
