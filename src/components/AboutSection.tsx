@@ -14,22 +14,25 @@ const AboutSection = () => (
         <div className="w-12 h-0.5 bg-primary mb-8" />
         <div className="space-y-5 text-muted-foreground leading-relaxed text-base md:text-lg">
           <p>
-            Originaire de Lyon, né en 1965, j'ai occupé des postes de manager et de direction 
-            dans différents groupes pendant plus de 20 ans. Cette riche expérience m'a permis 
-            de développer une expertise solide en stratégie d'entreprise, management et conduite 
-            du changement.
+            Après plus de vingt ans à des postes de direction au sein d'environnements exigeants, j'ai choisi de mettre mon expérience opérationnelle au service des organisations et des équipes.
           </p>
           <p>
-            Aujourd'hui consultant formateur, j'accompagne les entreprises dans leurs 
-            transformations stratégiques et opérationnelles. J'interviens également dans les 
-            grandes écoles de commerce pour transmettre une expertise terrain aux étudiants 
-            en formation initiale et continue.
+            J'ai piloté des centres de relation client de plusieurs centaines de collaborateurs, conduit des transformations organisationnelles et accompagné des managers confrontés à des enjeux de performance, d'engagement et de changement.
           </p>
           <p>
-            Parallèlement, la peinture est mon autre langage. Autodidacte orienté abstrait, 
-            j'adore jouer avec les couleurs en créant des contrastes forts. Je travaille 
-            principalement l'acrylique. Cette pratique artistique nourrit ma créativité et 
-            enrichit ma vision professionnelle d'une sensibilité unique.
+            À un moment clé de mon parcours, j'ai choisi de prendre du recul pour aligner pleinement mon engagement professionnel avec mes convictions. Cette étape a profondément renforcé ma manière d'exercer le management et l'accompagnement : avec davantage de clarté, d'exigence et une bienveillance assumée.
+          </p>
+          <p className="font-medium text-foreground italic">
+            Le terrain m'a appris une conviction essentielle : la performance durable repose autant sur la solidité du cadre que sur la qualité de la posture managériale.
+          </p>
+          <p>
+            Aujourd'hui, j'interviens comme consultant et formateur auprès de cabinets de conseil, d'organismes de formation et de PME. Je suis engagé dans la transmission du savoir et dans le soin apporté aux personnes que j'accompagne. Mon approche conjugue exigence professionnelle, bienveillance active et pragmatisme opérationnel.
+          </p>
+          <p>
+            En parallèle, j'enseigne dans des écoles de commerce afin de transmettre une expertise issue du réel, à travers une pédagogie structurée, responsabilisante et professionnalisante.
+          </p>
+          <p>
+            La peinture abstraite fait également partie de mon équilibre. Elle nourrit ma créativité et ma capacité à prendre du recul — deux qualités essentielles dans l'accompagnement des transformations humaines et organisationnelles.
           </p>
         </div>
         <a

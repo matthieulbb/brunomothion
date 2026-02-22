@@ -33,11 +33,21 @@ const Gallery = () => {
             Retour au site
           </Link>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">Galerie Artiste</h1>
-          <p className="text-muted-foreground text-lg mb-12 max-w-xl">
-            Autodidacte orienté abstrait, j'adore jouer avec les couleurs en créant des contrastes forts. 
-            Je travaille principalement l'acrylique.
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">Galerie artistique</h1>
+          <div className="space-y-4 text-muted-foreground text-lg mb-12 max-w-3xl">
+            <p>
+              La peinture abstraite fait partie de mon équilibre. Elle représente un espace d'expression et de recul, un lieu où l'intuition, la structure et le mouvement dialoguent librement.
+            </p>
+            <p>
+              À travers la création, j'explore d'autres manières de lire une situation, de percevoir les tensions et d'envisager des équilibres possibles.
+            </p>
+            <p className="text-base">
+              Dans mon activité de consultant et formateur, cette dimension créative nourrit ma capacité à appréhender la complexité, adopter plusieurs angles d'analyse et accompagner les transformations avec souplesse et discernement.
+            </p>
+            <p className="text-base font-medium text-foreground italic">
+              Créer, structurer, transformer : ces dynamiques se retrouvent autant dans l'art que dans le management.
+            </p>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {artworks.map((art, i) => (
