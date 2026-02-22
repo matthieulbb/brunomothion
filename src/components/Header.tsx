@@ -4,10 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   { label: "À propos", href: "#about" },
-  { label: "Consulting", href: "#expertise" },
-  { label: "Écoles", href: "#schools" },
-  { label: "Références", href: "#references" },
-  { label: "Blog", href: "#blog" },
+  { label: "Conseils et accompagnements", href: "#expertise" },
+  { label: "Interventions écoles", href: "#schools" },
+  { label: "Ressources", href: "#blog" },
+  { label: "Galerie artistique", href: "#gallery-intro" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -25,6 +25,12 @@ const Header = () => {
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false);
+    if (href === "#gallery-intro") {
+      if (isGallery) return;
+      // Navigate to gallery page
+      window.location.href = "/galerie";
+      return;
+    }
     if (isGallery) {
       window.location.href = "/" + href;
       return;
@@ -52,17 +58,15 @@ const Header = () => {
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                link.href === "#gallery-intro"
+                  ? "text-primary hover:text-blue-grey-dark border-b border-primary pb-0.5"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
               {link.label}
             </button>
           ))}
-          <Link
-            to="/galerie"
-            className="text-sm font-medium text-primary hover:text-blue-grey-dark transition-colors border-b border-primary pb-0.5"
-          >
-            Galerie Artiste
-          </Link>
         </nav>
 
         {/* Mobile toggle */}
@@ -83,18 +87,15 @@ const Header = () => {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="text-left text-sm font-medium text-muted-foreground hover:text-foreground py-2"
+                className={`text-left text-sm font-medium py-2 ${
+                  link.href === "#gallery-intro"
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {link.label}
               </button>
             ))}
-            <Link
-              to="/galerie"
-              onClick={() => setMobileOpen(false)}
-              className="text-sm font-medium text-primary py-2"
-            >
-              Galerie Artiste
-            </Link>
           </nav>
         </div>
       )}

@@ -16,15 +16,13 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <p className="text-sm font-medium tracking-widest uppercase text-primary mb-4">
-            Consultant Formateur & Artiste
-          </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground mb-6">
-            Accompagner le changement,{" "}
-            <span className="text-primary">transmettre l'expertise</span>
+            Transformer les organisations.{" "}
+            <span className="text-primary">Faire grandir les managers.</span>{" "}
+            Transmettre l'expérience du terrain.
           </h1>
           <p className="text-lg text-muted-foreground max-w-md mb-10">
-            Plus de 20 ans d'expérience au service de la transformation des organisations et de la transmission des savoirs.
+            Plus de 20 ans d'expérience en direction opérationnelle au service du management, de la relation client et de la transformation des organisations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button
@@ -32,14 +30,14 @@ const HeroSection = () => {
               className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:bg-blue-grey-dark transition-colors"
             >
               <Briefcase size={18} />
-              Consulting
+              Conseil & accompagnement
             </button>
             <button
               onClick={() => scrollTo("#schools")}
               className="inline-flex items-center gap-3 px-6 py-3.5 border border-primary text-primary rounded-lg font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
             >
               <GraduationCap size={18} />
-              Intervenant Écoles
+              Interventions écoles
             </button>
           </div>
         </motion.div>

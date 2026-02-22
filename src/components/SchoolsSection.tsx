@@ -1,11 +1,19 @@
 import { motion } from "framer-motion";
-import { BookOpen, Presentation, Users2, Compass } from "lucide-react";
+import { BookOpen, Presentation, Users2, Target, GraduationCap } from "lucide-react";
 
-const domains = [
-  { icon: Presentation, title: "Marketing & Stratégie commerciale" },
-  { icon: BookOpen, title: "Management & Leadership" },
-  { icon: Users2, title: "Communication & Négociation" },
-  { icon: Compass, title: "Entrepreneuriat & Innovation" },
+const themes = [
+  { icon: Presentation, title: "Management opérationnel" },
+  { icon: Users2, title: "Posture managériale et leadership" },
+  { icon: Target, title: "Pilotage d'activité et performance" },
+  { icon: BookOpen, title: "Relation client" },
+  { icon: GraduationCap, title: "Expertise technico-commerciale" },
+];
+
+const pedagogie = [
+  "Des études de cas issues de situations réelles",
+  "Des mises en situation concrètes",
+  "Des échanges structurés autour d'expériences terrain",
+  "Une articulation claire entre théorie et pratique",
 ];
 
 const SchoolsSection = () => (
@@ -17,16 +25,19 @@ const SchoolsSection = () => (
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="section-title text-foreground">Intervenant Écoles</h2>
+        <h2 className="section-title text-foreground">Interventions écoles</h2>
         <div className="w-12 h-0.5 bg-primary mb-8" />
+        <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4 max-w-3xl">
+          J'interviens dans des écoles de commerce et de management, du BTS au Mastère, pour transmettre une expertise issue du terrain à travers une pédagogie active et professionnalisante.
+        </p>
         <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-10 max-w-3xl">
-          J'interviens dans les grandes écoles de commerce et d'ingénieurs pour transmettre 
-          une expertise terrain aux étudiants en formation initiale et continue. Mes cours 
-          allient théorie académique et cas pratiques issus de mon expérience professionnelle.
+          Mon objectif est simple : permettre aux étudiants de comprendre les réalités du management et du pilotage d'activité, au-delà des concepts théoriques.
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-5">
-          {domains.map((d, i) => (
+        {/* Thématiques enseignées */}
+        <h3 className="font-semibold text-foreground mb-5">Thématiques enseignées</h3>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+          {themes.map((d, i) => (
             <motion.div
               key={d.title}
               initial={{ opacity: 0, x: -20 }}
@@ -38,9 +49,35 @@ const SchoolsSection = () => (
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                 <d.icon size={20} className="text-primary" />
               </div>
-              <span className="font-medium text-foreground">{d.title}</span>
+              <span className="font-medium text-foreground text-sm">{d.title}</span>
             </motion.div>
           ))}
+        </div>
+
+        {/* Ma pédagogie */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="p-7 rounded-xl bg-card border border-border">
+            <h3 className="font-semibold text-foreground mb-4">Ma pédagogie</h3>
+            <p className="text-sm text-muted-foreground mb-4">Mes interventions reposent sur :</p>
+            <ul className="space-y-2">
+              {pedagogie.map((item) => (
+                <li key={item} className="text-sm text-muted-foreground flex items-start gap-2">
+                  <span className="text-primary mt-0.5">•</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm text-muted-foreground mt-4">
+              Je veille à aligner mes contenus avec les référentiels RNCP et les exigences académiques.
+            </p>
+          </div>
+
+          <div className="p-7 rounded-xl bg-card border border-border flex flex-col justify-center">
+            <h3 className="font-semibold text-foreground mb-4">Finalité</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Former des étudiants capables d'analyser une situation, de prendre position et d'agir avec responsabilité dans des environnements professionnels exigeants.
+            </p>
+          </div>
         </div>
       </motion.div>
     </div>

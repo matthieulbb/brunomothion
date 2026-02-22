@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <div>
         <p className="font-display font-semibold text-lg">Bruno Mothion</p>
-        <p className="text-sm opacity-70 mt-1">Consultant Formateur & Artiste Peintre</p>
+        <p className="text-sm opacity-70 mt-1">Conseil, Formation & Accompagnement</p>
       </div>
       <div className="flex items-center gap-4">
         <a
@@ -18,7 +18,7 @@ const Footer = () => (
           <Linkedin size={18} />
         </a>
         <a
-          href="mailto:contact@brunomothion.com"
+          href="mailto:brunomothionconseiletformation@gmail.com"
           className="p-2 rounded-full border border-primary-foreground/20 hover:bg-primary-foreground/10 transition-colors"
           aria-label="Email"
         >
