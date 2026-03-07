@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { label: "Me concernant", href: "#about" },
+  { label: "À propos", href: "#about" },
   { label: "Conseils et accompagnements", href: "#expertise" },
   { label: "Interventions écoles", href: "#schools" },
   { label: "Ressources", href: "#blog" },
@@ -47,18 +47,18 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="font-display font-bold text-xl tracking-tight text-foreground">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between h-14 sm:h-16 md:h-20">
+        <Link to="/" className="font-display font-bold text-lg sm:text-xl tracking-tight text-foreground">
           Bruno Mothion
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-medium transition-colors whitespace-nowrap ${
                 link.href === "#gallery-intro"
                   ? "text-primary hover:text-blue-grey-dark border-b border-primary pb-0.5"
                   : "text-muted-foreground hover:text-foreground"
@@ -71,7 +71,7 @@ const Header = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -81,13 +81,13 @@ const Header = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-background/98 backdrop-blur-md border-t border-border">
-          <nav className="flex flex-col px-6 py-4 gap-3">
+        <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border">
+          <nav className="flex flex-col px-4 sm:px-6 py-4 gap-2">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={`text-left text-sm font-medium py-2 ${
+                className={`text-left text-sm font-medium py-2.5 ${
                   link.href === "#gallery-intro"
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"
