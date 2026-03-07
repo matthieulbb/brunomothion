@@ -5,13 +5,58 @@ import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ nom: "", prenom: "", email: "", sujet: "" });
+  const [form, setForm] = useState({
+  nom: "",
+  prenom: "",
+  email: "",
+  sujet: "",
+  message: "",
+});
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({ title: "Message envoyé", description: "Merci, je reviendrai vers vous rapidement." });
-    setForm({ nom: "", prenom: "", email: "", sujet: "" });
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("https://formspree.io/f/xbdzldae", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        nom: form.nom,
+        prenom: form.prenom,
+        email: form.email,
+        sujet: form.sujet,
+        message: form.message,
+      }),
+    });
+
+    if (response.ok) {
+      toast({
+        title: "Message envoyé",
+        description: "Merci, je reviendrai vers vous rapidement.",
+      });
+      setForm({
+        nom: "",
+        prenom: "",
+        email: "",
+        sujet: "",
+        message: "",
+      });
+    } else {
+      toast({
+        title: "Erreur",
+        description: "Le message n'a pas pu être envoyé. Merci de réessayer.",
+      });
+    }
+  } catch (error) {
+    toast({
+      title: "Erreur",
+      description: "Le message n'a pas pu être envoyé. Merci de réessayer.",
+    });
+  }
+};
 
   return (
     <section id="contact" className="px-4 sm:px-6 md:px-12 lg:px-20 py-16 sm:py-20 md:py-28 bg-warm-white">
@@ -102,26 +147,41 @@ const ContactSection = () => {
                 />
               </div>
               <div>
-                <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-1.5">Sujet</label>
-                <select
-                  required
-                  value={form.sujet}
-                  onChange={(e) => setForm({ ...form, sujet: e.target.value })}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-border bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
-                >
-                  <option value="">Sélectionnez un sujet</option>
-                  <option value="consulting">Consulting</option>
-                  <option value="ecole">École</option>
-                  <option value="autre">Autre</option>
-                </select>
-              </div>
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:bg-blue-grey-dark transition-colors w-full sm:w-auto justify-center"
-              >
-                <Send size={16} />
-                Envoyer
-              </button>
+  <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-1.5">Sujet</label>
+  <select
+    required
+    value={form.sujet}
+    onChange={(e) => setForm({ ...form, sujet: e.target.value })}
+    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-border bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
+  >
+    <option value="">Sélectionnez un sujet</option>
+    <option value="consulting">Consulting</option>
+    <option value="ecole">École</option>
+    <option value="autre">Autre</option>
+  </select>
+</div>
+
+<div>
+  <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-1.5">
+    Message
+  </label>
+  <textarea
+    required
+    maxLength={2000}
+    rows={5}
+    value={form.message}
+    onChange={(e) => setForm({ ...form, message: e.target.value })}
+    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-border bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors"
+  />
+</div>
+
+<button
+  type="submit"
+  className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-primary text-primary-foreground rounded-lg font-medium text-sm hover:bg-blue-grey-dark transition-colors w-full sm:w-auto justify-center"
+>
+  <Send size={16} />
+  Envoyer
+</button>
             </form>
           </div>
         </motion.div>
