@@ -47,18 +47,18 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="font-display font-bold text-xl tracking-tight text-foreground">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between h-14 sm:h-16 md:h-20">
+        <Link to="/" className="font-display font-bold text-lg sm:text-xl tracking-tight text-foreground">
           Bruno Mothion
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-medium transition-colors whitespace-nowrap ${
                 link.href === "#gallery-intro"
                   ? "text-primary hover:text-blue-grey-dark border-b border-primary pb-0.5"
                   : "text-muted-foreground hover:text-foreground"
