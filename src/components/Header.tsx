@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { label: "Me concernant", href: "#about" },
+  { label: "À propos", href: "#about" },
   { label: "Conseils et accompagnements", href: "#expertise" },
   { label: "Interventions écoles", href: "#schools" },
   { label: "Ressources", href: "#blog" },
