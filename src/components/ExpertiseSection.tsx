@@ -38,27 +38,27 @@ const pillars = [
 ];
 
 const ExpertiseSection = () => (
-  <section id="expertise" className="section-padding">
+  <section id="expertise" className="px-4 sm:px-6 md:px-12 lg:px-20 py-16 sm:py-20 md:py-28">
     <div className="max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="mb-14"
+        className="mb-10 sm:mb-14"
       >
-        <h2 className="section-title text-foreground">Conseil & accompagnement</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-foreground">Conseil & accompagnement</h2>
         <div className="w-12 h-0.5 bg-primary mb-4" />
-        <p className="section-subtitle max-w-3xl">
+        <p className="text-muted-foreground text-base sm:text-lg max-w-3xl">
           J'accompagne cabinets de conseil, organismes de formation et PME dans leurs enjeux de transformation managériale, de performance collective et de structuration organisationnelle.
         </p>
-        <p className="text-muted-foreground text-sm mt-3 max-w-3xl">
+        <p className="text-muted-foreground text-xs sm:text-sm mt-3 max-w-3xl">
           Mon intervention peut s'inscrire dans un cadre ponctuel ou régulier, en renfort d'équipes existantes ou dans le cadre de missions spécifiques.
         </p>
       </motion.div>
 
       {/* 3 pillars */}
-      <div className="grid md:grid-cols-3 gap-6 mb-16">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
         {pillars.map((p, i) => (
           <motion.div
             key={p.title}
@@ -66,17 +66,17 @@ const ExpertiseSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="p-7 rounded-xl bg-card border border-border hover:shadow-lg hover:border-primary/30 transition-all duration-300"
+            className="p-5 sm:p-7 rounded-xl bg-card border border-border hover:shadow-lg hover:border-primary/30 transition-all duration-300"
           >
-            <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
-              <p.icon size={22} className="text-primary" />
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 sm:mb-5">
+              <p.icon size={20} className="text-primary" />
             </div>
-            <h3 className="font-semibold text-foreground mb-2">{p.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.desc}</p>
+            <h3 className="font-semibold text-foreground mb-2 text-sm sm:text-base">{p.title}</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-3 sm:mb-4">{p.desc}</p>
             <ul className="space-y-1.5">
               {p.items.map((item) => (
-                <li key={item} className="text-sm text-muted-foreground flex items-start gap-2">
-                  <span className="text-primary mt-1">•</span>
+                <li key={item} className="text-xs sm:text-sm text-muted-foreground flex items-start gap-2">
+                  <span className="text-primary mt-0.5">•</span>
                   {item}
                 </li>
               ))}
@@ -86,19 +86,19 @@ const ExpertiseSection = () => (
       </div>
 
       {/* Ma posture + Modalités */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid sm:grid-cols-2 gap-4 sm:gap-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="p-7 rounded-xl bg-warm-white border border-border"
+          className="p-5 sm:p-7 rounded-xl bg-warm-white border border-border"
         >
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-3 sm:mb-4">
             <Handshake size={20} className="text-primary" />
-            <h3 className="font-semibold text-foreground">Ma posture</h3>
+            <h3 className="font-semibold text-foreground text-sm sm:text-base">Ma posture</h3>
           </div>
-          <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+          <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-muted-foreground leading-relaxed">
             <p>Issu du terrain, j'interviens avec une approche pragmatique et structurée.</p>
             <p>Je privilégie la clarté du cadre, la responsabilisation des acteurs et la mise en œuvre concrète des actions.</p>
             <p className="font-medium text-foreground">Mon objectif : produire des effets durables, au-delà de l'intervention.</p>
@@ -110,13 +110,13 @@ const ExpertiseSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="p-7 rounded-xl bg-warm-white border border-border"
+          className="p-5 sm:p-7 rounded-xl bg-warm-white border border-border"
         >
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-3 sm:mb-4">
             <Wrench size={20} className="text-primary" />
-            <h3 className="font-semibold text-foreground">Modalités d'intervention</h3>
+            <h3 className="font-semibold text-foreground text-sm sm:text-base">Modalités d'intervention</h3>
           </div>
-          <ul className="space-y-2 text-sm text-muted-foreground">
+          <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground">
             <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Missions ponctuelles ou accompagnements récurrents</li>
             <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Interventions quelques jours par mois</li>
             <li className="flex items-start gap-2"><span className="text-primary mt-0.5">•</span>Animation de séminaires et ateliers</li>

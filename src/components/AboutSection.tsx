@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Linkedin } from "lucide-react";
 
 const AboutSection = () => (
-  <section id="about" className="section-padding bg-warm-white">
+  <section id="about" className="px-4 sm:px-6 md:px-12 lg:px-20 py-16 sm:py-20 md:py-28 bg-warm-white">
     <div className="max-w-4xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -10,9 +10,9 @@ const AboutSection = () => (
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="section-title text-foreground">À propos</h2>
-        <div className="w-12 h-0.5 bg-primary mb-8" />
-        <div className="space-y-5 text-muted-foreground leading-relaxed text-base md:text-lg">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-foreground">À propos</h2>
+        <div className="w-12 h-0.5 bg-primary mb-6 sm:mb-8" />
+        <div className="space-y-4 sm:space-y-5 text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
           <p>
             Après plus de vingt ans à des postes de direction au sein d'environnements exigeants, j'ai choisi de mettre mon expérience opérationnelle au service des organisations et des équipes.
           </p>
@@ -39,7 +39,7 @@ const AboutSection = () => (
           href="https://www.linkedin.com/in/brunomothion/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 mt-8 px-5 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-blue-grey-dark transition-colors"
+          className="inline-flex items-center gap-2 mt-6 sm:mt-8 px-5 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-blue-grey-dark transition-colors"
         >
           <Linkedin size={16} />
           Voir mon profil LinkedIn

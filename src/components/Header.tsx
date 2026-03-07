@@ -71,7 +71,7 @@ const Header = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -81,13 +81,13 @@ const Header = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-background/98 backdrop-blur-md border-t border-border">
-          <nav className="flex flex-col px-6 py-4 gap-3">
+        <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border">
+          <nav className="flex flex-col px-4 sm:px-6 py-4 gap-2">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className={`text-left text-sm font-medium py-2 ${
+                className={`text-left text-sm font-medium py-2.5 ${
                   link.href === "#gallery-intro"
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"

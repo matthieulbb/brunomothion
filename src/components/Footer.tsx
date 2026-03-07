@@ -1,11 +1,11 @@
 import { Linkedin, Mail } from "lucide-react";
 
 const Footer = () => (
-  <footer className="bg-foreground text-primary-foreground py-12 px-6 md:px-12">
-    <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-      <div>
-        <p className="font-display font-semibold text-lg">Bruno Mothion</p>
-        <p className="text-sm opacity-70 mt-1">Conseil, Formation & Accompagnement</p>
+  <footer className="bg-foreground text-primary-foreground py-8 sm:py-12 px-4 sm:px-6 md:px-12">
+    <div className="max-w-7xl mx-auto flex flex-col items-center gap-4 sm:gap-6 md:flex-row md:justify-between">
+      <div className="text-center md:text-left">
+        <p className="font-display font-semibold text-base sm:text-lg">Bruno Mothion</p>
+        <p className="text-xs sm:text-sm opacity-70 mt-1">Conseil, Formation & Accompagnement</p>
       </div>
       <div className="flex items-center gap-4">
         <a
@@ -25,7 +25,7 @@ const Footer = () => (
           <Mail size={18} />
         </a>
       </div>
-      <p className="text-xs opacity-50">© {new Date().getFullYear()} Bruno Mothion. Tous droits réservés.</p>
+      <p className="text-xs opacity-50 text-center">© {new Date().getFullYear()} Bruno Mothion. Tous droits réservés.</p>
     </div>
   </footer>
 );
