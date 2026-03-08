@@ -9,12 +9,13 @@ import peinture01 from "@/assets/peinture-01.jpg";
 import peinture02 from "@/assets/peinture-02.jpg";
 import peinture03 from "@/assets/peinture-03.jpg";
 import peinture04 from "@/assets/peinture-04.jpg";
-import peinture05 from "@/assets/peinture-05.jpg";
 import peinture06 from "@/assets/peinture-06.jpg";
 import peinture07 from "@/assets/peinture-07.jpg";
 import peinture08 from "@/assets/peinture-08.jpg";
 import peinture09 from "@/assets/peinture-09.jpg";
 import peinture10 from "@/assets/peinture-10.jpg";
+import peinture11 from "@/assets/peinture-11.jpg";
+import peinture12 from "@/assets/peinture-12.jpg";
 
 const artworks = [
   { id: 1, title: "Peinture n°1", technique: "Acrylique sur toile", style: "Abstrait", image: peinture01 },
