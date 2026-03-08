@@ -9,24 +9,26 @@ import peinture01 from "@/assets/peinture-01.jpg";
 import peinture02 from "@/assets/peinture-02.jpg";
 import peinture03 from "@/assets/peinture-03.jpg";
 import peinture04 from "@/assets/peinture-04.jpg";
-import peinture05 from "@/assets/peinture-05.jpg";
 import peinture06 from "@/assets/peinture-06.jpg";
 import peinture07 from "@/assets/peinture-07.jpg";
 import peinture08 from "@/assets/peinture-08.jpg";
 import peinture09 from "@/assets/peinture-09.jpg";
 import peinture10 from "@/assets/peinture-10.jpg";
+import peinture11 from "@/assets/peinture-11.jpg";
+import peinture12 from "@/assets/peinture-12.jpg";
 
 const artworks = [
   { id: 1, title: "Peinture n°1", technique: "Acrylique sur toile", style: "Abstrait", image: peinture01 },
   { id: 2, title: "Peinture n°2", technique: "Acrylique sur toile", style: "Abstrait", image: peinture02 },
   { id: 3, title: "Peinture n°3", technique: "Acrylique sur toile", style: "Abstrait", image: peinture03 },
   { id: 4, title: "Peinture n°4", technique: "Acrylique sur toile", style: "Abstrait", image: peinture04 },
-  { id: 5, title: "Peinture n°5", technique: "Acrylique sur toile", style: "Abstrait", image: peinture05 },
-  { id: 6, title: "Peinture n°6", technique: "Acrylique sur toile", style: "Abstrait", image: peinture06 },
-  { id: 7, title: "Peinture n°7", technique: "Acrylique sur toile", style: "Abstrait", image: peinture07 },
-  { id: 8, title: "Peinture n°8", technique: "Acrylique sur toile", style: "Abstrait", image: peinture08 },
-  { id: 9, title: "Peinture n°9", technique: "Acrylique sur toile", style: "Abstrait", image: peinture09 },
-  { id: 10, title: "Peinture n°10", technique: "Acrylique sur toile", style: "Abstrait", image: peinture10 },
+  { id: 5, title: "Peinture n°5", technique: "Acrylique sur toile", style: "Abstrait", image: peinture06 },
+  { id: 6, title: "Peinture n°6", technique: "Acrylique sur toile", style: "Abstrait", image: peinture07 },
+  { id: 7, title: "Peinture n°7", technique: "Acrylique sur toile", style: "Abstrait", image: peinture08 },
+  { id: 8, title: "Peinture n°8", technique: "Acrylique sur toile", style: "Abstrait", image: peinture09 },
+  { id: 9, title: "Peinture n°9", technique: "Acrylique sur toile", style: "Abstrait", image: peinture10 },
+  { id: 10, title: "Peinture n°10", technique: "Acrylique sur toile", style: "Abstrait", image: peinture11 },
+  { id: 11, title: "Peinture n°11", technique: "Acrylique sur toile", style: "Abstrait", image: peinture12 },
 ];
 
 const Gallery = () => {
