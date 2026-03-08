@@ -5,16 +5,28 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-import artTempete from "@/assets/art-tempete-en-mer.jpg";
-import artBateau from "@/assets/art-bateau-echoue.jpg";
-import artCalligraphie from "@/assets/art-calligraphie-japonaise.jpg";
-import artEruption from "@/assets/art-eruption-volcanique.jpg";
+import peinture01 from "@/assets/peinture-01.jpg";
+import peinture02 from "@/assets/peinture-02.jpg";
+import peinture03 from "@/assets/peinture-03.jpg";
+import peinture04 from "@/assets/peinture-04.jpg";
+import peinture05 from "@/assets/peinture-05.jpg";
+import peinture06 from "@/assets/peinture-06.jpg";
+import peinture07 from "@/assets/peinture-07.jpg";
+import peinture08 from "@/assets/peinture-08.jpg";
+import peinture09 from "@/assets/peinture-09.jpg";
+import peinture10 from "@/assets/peinture-10.jpg";
 
 const artworks = [
-  { id: 1, title: "Tempête en mer", technique: "Acrylique sur toile", style: "Abstrait", image: artTempete },
-  { id: 2, title: "Bateau échoué en flamme", technique: "Acrylique sur toile", style: "Abstrait", image: artBateau },
-  { id: 3, title: "Calligraphie Japonaise revisitée n°1", technique: "Acrylique sur toile", style: "Abstrait", image: artCalligraphie },
-  { id: 4, title: "Éruption Volcanique", technique: "Acrylique sur toile", style: "Abstrait", image: artEruption },
+  { id: 1, title: "Peinture n°1", technique: "Acrylique sur toile", style: "Abstrait", image: peinture01 },
+  { id: 2, title: "Peinture n°2", technique: "Acrylique sur toile", style: "Abstrait", image: peinture02 },
+  { id: 3, title: "Peinture n°3", technique: "Acrylique sur toile", style: "Abstrait", image: peinture03 },
+  { id: 4, title: "Peinture n°4", technique: "Acrylique sur toile", style: "Abstrait", image: peinture04 },
+  { id: 5, title: "Peinture n°5", technique: "Acrylique sur toile", style: "Abstrait", image: peinture05 },
+  { id: 6, title: "Peinture n°6", technique: "Acrylique sur toile", style: "Abstrait", image: peinture06 },
+  { id: 7, title: "Peinture n°7", technique: "Acrylique sur toile", style: "Abstrait", image: peinture07 },
+  { id: 8, title: "Peinture n°8", technique: "Acrylique sur toile", style: "Abstrait", image: peinture08 },
+  { id: 9, title: "Peinture n°9", technique: "Acrylique sur toile", style: "Abstrait", image: peinture09 },
+  { id: 10, title: "Peinture n°10", technique: "Acrylique sur toile", style: "Abstrait", image: peinture10 },
 ];
 
 const Gallery = () => {
@@ -49,13 +61,13 @@ const Gallery = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
             {artworks.map((art, i) => (
               <motion.div
                 key={art.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
                 onClick={() => setSelected(art)}
                 className="aspect-[4/5] rounded-lg sm:rounded-xl cursor-pointer overflow-hidden group relative"
               >
