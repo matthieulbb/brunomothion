@@ -47,7 +47,7 @@ const ExpertiseSection = () => (
         transition={{ duration: 0.6 }}
         className="mb-10 sm:mb-14"
       >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-foreground">Conseil & accompagnement</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-foreground">Conseil</h2>
         <div className="w-12 h-0.5 bg-primary mb-4" />
         <p className="text-muted-foreground text-base sm:text-lg max-w-3xl">
           J'accompagne cabinets de conseil, organismes de formation et PME dans leurs enjeux de transformation managériale, de performance collective et de structuration organisationnelle.
